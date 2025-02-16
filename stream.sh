@@ -2,6 +2,9 @@
 
 set -e
 
+# Start a simple HTTP server for health checks
+( while true; do echo -e "HTTP/1.1 200 OK\r\n"; sleep 1; done ) | nc -l -p 8080 &
+
 while true
 do
   ffmpeg -loglevel info -y -re \
