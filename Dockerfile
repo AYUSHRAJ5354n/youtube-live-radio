@@ -1,6 +1,6 @@
 FROM alpine:3
 
-RUN apk add --no-cache bash ffmpeg curl
+RUN apk add --no-cache bash ffmpeg python3 py3-pip
 
 RUN mkdir /usr/src/app -p
 WORKDIR /usr/src/app/
